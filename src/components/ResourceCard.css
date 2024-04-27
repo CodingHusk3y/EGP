@@ -1,0 +1,45 @@
+.resource-card {
+    background-color: #8DB600;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(156, 45, 178, 0.1);
+  }
+  
+  .resource-card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .resource-card p {
+    margin-bottom: 15px;
+  }
+  
+  .resource-card a {
+    color: #f0f2f5;
+    text-decoration: none;
+  }
+
+  .resource-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .resource-card a:hover {
+    text-decoration: underline;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #FF6F00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }

@@ -1,0 +1,9 @@
+body {
+    background-color: #0077be; /* Ocean color */
+
+  }
+
+.state:hover {
+  background-color: lightblue;
+  color: white;
+}
