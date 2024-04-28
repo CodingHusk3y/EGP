@@ -56,7 +56,7 @@ function GAStudent() {
     <div className="Main">
 
       <div className="header">
-        <h1>GA Student Page</h1>
+        <h1>Georgia State University Student Page</h1>
         <Link to="/"><button className="headerBtn"> Back to Map 🔍  </button></Link>
         <Link to="/GAStudent/new"><button className="headerBtn"> Add Student 🏆 </button></Link>
       </div>
