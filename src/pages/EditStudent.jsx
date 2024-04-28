@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../client.jsx';
-
+import './EditStudent.css';
 
 const EditStudent = ({data}) => {
 
@@ -16,7 +16,7 @@ const EditStudent = ({data}) => {
           .update({ name: post.name, major: post.major,  description: post.description})
           .eq('id', id);
       
-        window.location = "/";
+        window.location = "/GAStudent";
     }    
       
     const deletePost = async (event) => {
@@ -27,7 +27,7 @@ const EditStudent = ({data}) => {
             .delete()
             .eq('id', id); 
         
-        window.location = "http://localhost:3000/";
+        window.location = "/GAStudent";
     }
     
     const handleChange = (event) => {
@@ -55,7 +55,7 @@ const EditStudent = ({data}) => {
             <textarea rows="5" cols="50" id="description" value={post.description} onChange={handleChange} >
             </textarea>
             <br/>
-            <input type="submit" value="Submit" onClick={updatePost}/>
+            <input type="submit" value="Update" onClick={updatePost}/>
             <button className="deleteButton" onClick={deletePost}>Delete</button>
           </form>
         </div>

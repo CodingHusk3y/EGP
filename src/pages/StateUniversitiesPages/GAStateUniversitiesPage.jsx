@@ -32,7 +32,7 @@ const GAStateUniversitiesPage = () => {
   return (
     <>
     <div>
-      <h1>GA State Universities Page</h1>
+      <h1>GA State Universities Page (Only Georgia State University is available for now)</h1>
     </div>
     <div className="UniversitiesContainer">
       <div className="resource-grid">

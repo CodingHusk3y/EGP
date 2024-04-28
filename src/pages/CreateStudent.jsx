@@ -1,36 +1,40 @@
 import React, { useState } from 'react';
 import { supabase } from '../client.jsx';
+import './CreateStudent.css';
+import GAStudent from './StudentPage/GAStudent';
 
 
 
-const CreateStudent = (event) => {
-    
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        await supabase
-            .from('Posts')
-            .insert({name: post.name, major: post.major, description: post.description})
-            .select();
-        }
-
+const CreateStudent = () => {
+  
   const [post, setPost] = useState({name: "", major: "", description: ""})
 
-  const handleChange = (event) => {
-    const {name, value} = event.target;
-    setPost( (prev) => {
-      return {
-        ...prev,
-        [name]:value,
-      }
-    })
+  const CreatePost = async (event) => {
+    event.preventDefault();
+  
+    await supabase
+      .from('Posts')
+      .insert({name: post.name, major: post.major, description: post.description})
+      .select();
+  
+    window.location = "/GAStudent";
   }
 
+    const handleChange = (event) => {
+        const {name, value} = event.target;
+        setPost( (prev) => {
+            return {
+                ...prev,
+                [name]:value,
+            }
+        })
+    }
+  
   
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label htmlFor="name">Name</label> <br />
         <input type="text" id="name" name="name" onChange={handleChange} /><br />
         <br/>
@@ -42,10 +46,10 @@ const CreateStudent = (event) => {
         <label htmlFor="description">Description</label><br />
         <textarea rows="5" cols="50" id="description" name="description" onChange={handleChange} />
         <br/>
-        <input type="submit" value="Submit" onClick={CreateStudent} />
+        <input type="submit" value="Submit" onClick={CreatePost} />
       </form>
     </div>
   );
-}
+  }
 
 export default CreateStudent;

@@ -16,9 +16,9 @@ const Card = (props) =>  {
       <div className="Card">
           <Link to={'edit/'+ props.id}><img className="moreButton" alt="edit button" src={more} /></Link>
           <h2 className="name">{props.name}</h2>
-          <h3 className="major">{"by " + props.major}</h3>
+          <h3 className="major">{"Major: " + props.major}</h3>
           <p className="description">{props.description}</p>
-          <button className="betButton" onClick={updateCount} >👍 Bet Count: {count}</button>
+          <button className="betButton" onClick={updateCount} >👍 Connected: {count}</button>
       </div>
   );
 };
