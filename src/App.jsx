@@ -23,7 +23,7 @@ function App() {
           <Route path="/state/:stateAbbreviation" element={<USAMapComponent states={states} />} />
           <Route path="/GAStateUniversitiesPage" element={<GAStateUniversitiesPage />} />          
         </Route>
-        <Route path="/GAStudent/*" element={<GAStudent />} /> 
+        <Route path="/GAStudent" element={<GAStudent />} /> 
         <Route path="GAStudent/edit/:id" element={<EditStudent />} />
         <Route path="GAStudent/new" element={<CreateStudent />} />
       </Routes>
